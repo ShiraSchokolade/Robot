@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 517230b7891caeb42a340a1cb453d657
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: all1:LBR_iiwa_7_R800_
+    100002: all1:LBR_iiwa_7_R800_link1
+    100004: all1:LBR_iiwa_7_R800_link2
+    100006: all1:LBR_iiwa_7_R800_link3
+    100008: all1:LBR_iiwa_7_R800_link4
+    100010: all1:LBR_iiwa_7_R800_link5
+    100012: all1:LBR_iiwa_7_R800_link6
+    100014: all1:LBR_iiwa_7_R800_link7
+    100016: all1:LBR_iiwa_7_R800_link8
+    100018: joint1
+    100020: joint2
+    100022: joint3
+    100024: joint4
+    100026: joint5
+    100028: joint6
+    100030: joint7
+    100032: joint8
+    100034: joint9
+    100036: //RootNode
+    400000: all1:LBR_iiwa_7_R800_
+    400002: all1:LBR_iiwa_7_R800_link1
+    400004: all1:LBR_iiwa_7_R800_link2
+    400006: all1:LBR_iiwa_7_R800_link3
+    400008: all1:LBR_iiwa_7_R800_link4
+    400010: all1:LBR_iiwa_7_R800_link5
+    400012: all1:LBR_iiwa_7_R800_link6
+    400014: all1:LBR_iiwa_7_R800_link7
+    400016: all1:LBR_iiwa_7_R800_link8
+    400018: joint1
+    400020: joint2
+    400022: joint3
+    400024: joint4
+    400026: joint5
+    400028: joint6
+    400030: joint7
+    400032: joint8
+    400034: joint9
+    400036: //RootNode
+    2100000: lambert1
+    2100002: mat_top
+    2100004: mat_font
+    2100006: mat_fontBackground
+    2100008: mat_Orange
+    2300000: all1:LBR_iiwa_7_R800_
+    2300002: all1:LBR_iiwa_7_R800_link1
+    2300004: all1:LBR_iiwa_7_R800_link2
+    2300006: all1:LBR_iiwa_7_R800_link3
+    2300008: all1:LBR_iiwa_7_R800_link4
+    2300010: all1:LBR_iiwa_7_R800_link5
+    2300012: all1:LBR_iiwa_7_R800_link6
+    2300014: all1:LBR_iiwa_7_R800_link7
+    2300016: all1:LBR_iiwa_7_R800_link8
+    3300000: all1:LBR_iiwa_7_R800_
+    3300002: all1:LBR_iiwa_7_R800_link1
+    3300004: all1:LBR_iiwa_7_R800_link2
+    3300006: all1:LBR_iiwa_7_R800_link3
+    3300008: all1:LBR_iiwa_7_R800_link4
+    3300010: all1:LBR_iiwa_7_R800_link5
+    3300012: all1:LBR_iiwa_7_R800_link6
+    3300014: all1:LBR_iiwa_7_R800_link7
+    3300016: all1:LBR_iiwa_7_R800_link8
+    4300000: all1:LBR_iiwa_7_R800_link8
+    4300002: all1:LBR_iiwa_7_R800_link7
+    4300004: all1:LBR_iiwa_7_R800_link6
+    4300006: all1:LBR_iiwa_7_R800_link5
+    4300008: all1:LBR_iiwa_7_R800_link4
+    4300010: all1:LBR_iiwa_7_R800_link3
+    4300012: all1:LBR_iiwa_7_R800_link2
+    4300014: all1:LBR_iiwa_7_R800_link1
+    4300016: all1:LBR_iiwa_7_R800_
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 78262967bddea454da1d92dacd130bd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_Orange
+    second: {fileID: 2100000, guid: a279c493a0f0d9941877234d4db1ec0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_font
+    second: {fileID: 2100000, guid: 1cef77a07df0e754ebc27c8a6e028393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_fontBackground
+    second: {fileID: 2100000, guid: 2c6566bbbf1769c4199b2b71999509f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_top
+    second: {fileID: 2100000, guid: 78262967bddea454da1d92dacd130bd9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
