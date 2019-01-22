@@ -89,7 +89,7 @@ public class RobotJoint : MonoBehaviour {
 
     public void Reset()
     {
-        print(this + " current rotation:" +joint.eulerAngles);
+        //print(this + " current rotation:" +joint.eulerAngles);
         
         moving = false;
 
