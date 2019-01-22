@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RobotSceneManager : MonoBehaviour {
 
     public GameObject robot;
@@ -11,6 +12,9 @@ public class RobotSceneManager : MonoBehaviour {
     private static string noAnimation = "Static";
 
     private Animator animator;
+    private RobotJointManager jointManager;
+
+    public bool useCustomAnimation = true;
     private bool animationIsPlaying = false;
     private bool hasBeenPlaced = false;
 
@@ -18,14 +22,19 @@ public class RobotSceneManager : MonoBehaviour {
 
 	void Start () {
 
-        if (robot.GetComponent<Animator>())
+        jointManager = robot.GetComponent<RobotJointManager>();
+
+        if (!useCustomAnimation)
         {
-            animator = robot.GetComponent<Animator>();
-            animator.speed = 0f;
-        }
-        else
-        {
-            Debug.Log("Robot misses Animator Component");
+            if (robot.GetComponent<Animator>())
+            {
+                animator = robot.GetComponent<Animator>();
+                animator.speed = 0f;
+            }
+            else
+            {
+                Debug.Log("Robot misses Animator Component");
+            }
         }
 
         if (robot.GetComponent<TapToPlace>())
@@ -47,13 +56,19 @@ public class RobotSceneManager : MonoBehaviour {
 
             if (animationIsPlaying)
             {
-                animator.speed = 0f;
+                if (!useCustomAnimation)
+                    animator.speed = 0f;
+                else
+                    jointManager.StopJointMovement();
                 animationIsPlaying = false;
             }
         }
         else if(!tapToPlace.IsBeingPlaced && !hasBeenPlaced)
         {
-            animator.speed = 1f;
+            if (!useCustomAnimation)
+                animator.speed = 1f;
+            else
+                jointManager.StartJointMovement();
             animationIsPlaying = true;
             hasBeenPlaced = true;
         }		
@@ -63,19 +78,28 @@ public class RobotSceneManager : MonoBehaviour {
     {
         if (!animationIsPlaying)
         {
-            animator.speed = 1f;
+            if (!useCustomAnimation)
+                animator.speed = 1f;
+            else
+                jointManager.StartJointMovement();
             animationIsPlaying = true;
         }
         else
         {
-            animator.speed = 0f;
+            if (!useCustomAnimation)
+                animator.speed = 0f;
+            else
+                jointManager.StopJointMovement();
             animationIsPlaying = false;
         }
     }
 
     public void ResetRobot()
     {
-        animator.speed = 0;
+        if (!useCustomAnimation)
+            animator.speed = 0;
+        else
+            jointManager.StopJointMovement();
 
     }
 }
