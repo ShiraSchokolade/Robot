@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 170
   rotationAxis: 1
+  jointSpeed: 1
 --- !u!1 &723748636 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: d1669393909e24d48b3b5a1ec9aefb15, type: 3}
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 170
   rotationAxis: 1
+  jointSpeed: 1.4
 --- !u!1 &785978007 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: d1669393909e24d48b3b5a1ec9aefb15, type: 3}
@@ -285,6 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 120
   rotationAxis: 2
+  jointSpeed: 1
 --- !u!1001 &1216212757
 Prefab:
   m_ObjectHideFlags: 0
@@ -344,6 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 120
   rotationAxis: 2
+  jointSpeed: 0.5
 --- !u!1 &1420171720 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100012, guid: d1669393909e24d48b3b5a1ec9aefb15, type: 3}
@@ -361,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 170
   rotationAxis: 1
+  jointSpeed: 1
 --- !u!1 &1517915952
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 175
   rotationAxis: 1
+  jointSpeed: 1
 --- !u!1001 &1555910188
 Prefab:
   m_ObjectHideFlags: 0
@@ -549,6 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jointLimit: 120
   rotationAxis: 2
+  jointSpeed: 1
 --- !u!1 &1889424036 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: d1669393909e24d48b3b5a1ec9aefb15, type: 3}
@@ -607,7 +614,7 @@ MonoBehaviour:
   joint4: {fileID: 1661626838}
   joint5: {fileID: 1420171724}
   joint6: {fileID: 785978008}
-  joint7: {fileID: 785978008}
+  joint7: {fileID: 1519057992}
 --- !u!65 &1889424040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -620,6 +627,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2875572, y: 1.2459617, z: 0.2879734}
   m_Center: {x: 0.012939468, y: 0.61866045, z: 0.0018286407}
+--- !u!95 &1889424041
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889424036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac7d5136f7a5108438866afc8ee20c92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1903416280 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114611684728110934, guid: a611e772ef8ddf64d8106a9cbb70f31c,

@@ -6,7 +6,7 @@ public class RobotJoint : MonoBehaviour {
 
     public int jointLimit = 170;
     public BoundsExtensions.Axis rotationAxis = BoundsExtensions.Axis.Y;
-    private float jointSpeed = 1f;
+    public float jointSpeed = 1f;
 
     private Transform joint;
     private float rotationStartValue;
@@ -19,11 +19,6 @@ public class RobotJoint : MonoBehaviour {
 	void Start () {
 
         joint = this.transform;
-
-        print(this + " rot: " + this.transform.rotation);
-        print(this + " localrot: " + this.transform.localRotation);
-        print(this + " euler: " + this.transform.eulerAngles);
-        print(this + " localEuler: " + this.transform.localEulerAngles);
 
         if (rotationAxis == BoundsExtensions.Axis.Y)
             rotationStartValue = joint.eulerAngles.y;
@@ -51,7 +46,6 @@ public class RobotJoint : MonoBehaviour {
                 {
                     moving = false;
                 }
-                //print("rotate to" + currentDegree);
             }
             else
             {
@@ -89,7 +83,6 @@ public class RobotJoint : MonoBehaviour {
 
     public void Reset()
     {
-        //print(this + " current rotation:" +joint.eulerAngles);
         
         moving = false;
 
@@ -97,7 +90,6 @@ public class RobotJoint : MonoBehaviour {
             joint.eulerAngles = new Vector3(joint.localEulerAngles.x, 0, joint.localEulerAngles.z);
         else if (rotationAxis == BoundsExtensions.Axis.Z)
         {
-            print("x:" + joint.localEulerAngles.x + "y: " + joint.localEulerAngles.y +" currentdegree: " + currentDegree);
             joint.eulerAngles = new Vector3(joint.localEulerAngles.x, joint.localEulerAngles.y, 0);
         }
         currentDegree = 0;
