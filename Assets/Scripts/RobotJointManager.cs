@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// controls joint movement
+/// </summary>
 public class RobotJointManager : MonoBehaviour {
 
     public RobotJoint joint1;
@@ -28,6 +31,10 @@ public class RobotJointManager : MonoBehaviour {
         jointAnimationIsPlaying = true;
     }
 
+    /// <summary>
+    /// use this method to create custom animations
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator MoveJoints()
     {
         joint1.MoveJoint(160f);
@@ -58,7 +65,9 @@ public class RobotJointManager : MonoBehaviour {
 
         // start animation again
         if (jointAnimationIsPlaying)
+        {
             coroutine = StartCoroutine(MoveJoints());
+        }
 
     }
 	

@@ -9,7 +9,6 @@ public class RobotJoint : MonoBehaviour {
     public float jointSpeed = 1f;
 
     private Transform joint;
-    private float rotationStartValue;
     private float currentDegree;
     private float targetDegree;
 
@@ -19,41 +18,52 @@ public class RobotJoint : MonoBehaviour {
 	void Start () {
 
         joint = this.transform;
-
-        if (rotationAxis == BoundsExtensions.Axis.Y)
-            rotationStartValue = joint.eulerAngles.y;
-        else if (rotationAxis == BoundsExtensions.Axis.Z)
-            rotationStartValue = joint.eulerAngles.z;
     }
 	
 	void Update () {
 
         if (moving)
         {
-            if (currentDegree <= targetDegree - 1f || currentDegree >= targetDegree + 1f)
+            if (currentDegree <= targetDegree - 1f || currentDegree >= targetDegree + 1f)   // compare to a range, or it might miss the targetDegree
             {
                 if (movePositive && currentDegree < jointLimit)
                 {
                     currentDegree += jointSpeed;
-                    RotateJointTo(jointSpeed);
+                    RotateJoint(jointSpeed);
                 }
                 else if (!movePositive && currentDegree > (jointLimit * -1f))
                 {
                     currentDegree -= jointSpeed;
-                    RotateJointTo(-jointSpeed);
+                    RotateJoint(-jointSpeed);
                 }
                 else
                 {
+                    print(this.name + " Joint Limit Exeeded");
                     moving = false;
                 }
             }
+            // give the angle a clear value
             else
             {
+                currentDegree = targetDegree;
+                if (rotationAxis == BoundsExtensions.Axis.Y)
+                {
+                    joint.localEulerAngles = new Vector3(0, currentDegree, 0);
+                }
+                else if (rotationAxis == BoundsExtensions.Axis.Z)
+                {
+                    joint.localEulerAngles = new Vector3(0, 0, currentDegree);
+                }
+
                 moving = false;
             }        
         }		
 	}
 
+    /// <summary>
+    /// triggers joint movement
+    /// </summary>
+    /// <param name="degree">joints target degree</param>
     public void MoveJoint(float degree)
     {
         moving = true;
@@ -65,7 +75,11 @@ public class RobotJoint : MonoBehaviour {
             movePositive = false;
     }
 
-    private void RotateJointTo(float value)
+    /// <summary>
+    /// rotate joint around its axis
+    /// </summary>
+    /// <param name="value">amount to rotate</param>
+    private void RotateJoint(float value)
     {
         float axisValue;
 
@@ -81,9 +95,11 @@ public class RobotJoint : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// reset angle to 0
+    /// </summary>
     public void Reset()
-    {
-        
+    {       
         moving = false;
 
         if (rotationAxis == BoundsExtensions.Axis.Y)

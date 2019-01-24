@@ -8,13 +8,13 @@ public class RobotSceneManager : MonoBehaviour {
 
     public GameObject robot;
 
-    private static string standardAnimation = "SmoothAnim";
-    private static string noAnimation = "Static";
-
     private Animator animator;
     private RobotJointManager jointManager;
 
+    // dont toggle this at the moment, use the two diffrent scenes instead. 
+    // because the robots are not using the same maya model (the one with the animation)
     public bool useCustomAnimation = true;
+
     private bool animationIsPlaying = false;
     private bool hasBeenPlaced = false;
 
@@ -50,6 +50,7 @@ public class RobotSceneManager : MonoBehaviour {
 
 	void Update () {
 
+        // placement mode -> stop animation
         if (tapToPlace.IsBeingPlaced && hasBeenPlaced)
         {
             hasBeenPlaced = false;
@@ -63,6 +64,7 @@ public class RobotSceneManager : MonoBehaviour {
                 animationIsPlaying = false;
             }
         }
+        // static mode -> play animation
         else if(!tapToPlace.IsBeingPlaced && !hasBeenPlaced)
         {
             if (!useCustomAnimation)
@@ -94,12 +96,14 @@ public class RobotSceneManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// stops robot movement
+    /// </summary>
     public void ResetRobot()
     {
         if (!useCustomAnimation)
             animator.speed = 0;
         else
             jointManager.StopJointMovement();
-
     }
 }
